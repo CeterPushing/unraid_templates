@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>LLaVA</Name>
+  <Repository>ashleykza/llava</Repository>
+  <Registry>https://hub.docker.com/r/ashleykza/llava/</Registry>
+  <Network>bridge</Network>
+  <MyID></MyID>
+  <Shell>bash -c</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ashleykleynhans/llava-docker</Support>
+  <Project>https://github.com/ashleykleynhans/llava-docker</Project>
+  <Overview>LLaVA Docker Container</Overview>
+  <Category>Machine Learning:Tools</Category>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
+  <TemplateURL></TemplateURL>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <RegistryLink></RegistryLink>
+  <!-- Port Mappings -->
+  <Config Name="API Port" Target="5000" Default="5000" Mode="tcp" Description="Port for the LLaVA Flask API." Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <!-- Volume Mappings -->
+  <Config Name="Workspace" Target="/workspace" Default="/mnt/user/appdata/llava/workspace" Mode="rw" Description="Workspace volume for persistence and data." Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <!-- Environment Variables -->
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="e" Description="Comma-separated list of NVIDIA GPU UUIDs to make available to the container or 'all' to use all available GPUs." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
